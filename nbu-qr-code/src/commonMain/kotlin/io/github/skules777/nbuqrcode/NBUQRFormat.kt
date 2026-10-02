@@ -1,0 +1,136 @@
+package io.github.skules777.nbuqrcode
+
+import kotlin.io.encoding.Base64
+import kotlin.time.Instant
+
+/** Константи й байтове кодування формату 003 (додаток 4 до Правил). */
+internal object NBUQRFormat {
+    const val VERSION = "003"
+    const val SERVICE_TAG = "BCD"
+
+    /**
+     * Єдиний код старту застосунку для графічного QR-коду. Постанова дозволяє
+     * й персоніфікований код старту застосунку банку, але такий QR читає лише сканер цього
+     * банку (docs/NBU-COMPLIANCE.md, "QR-код і deep link").
+     */
+    const val QR_APP_START_URL = "https://qr.bank.gov.ua/"
+
+    /**
+     * Версія формату 003 передбачає єдину валюту — гривню, тож валюта є
+     * константою формату, а не параметром платежу.
+     */
+    const val CURRENCY_CODE = "UAH"
+
+    /**
+     * Що кодується в поле 10, коли `category` порожня: "інше / інше" за ISO 20022
+     * (код категорії `OTHR` і код цілі `OTHR`) — чесне "не вказано", а не вигаданий код.
+     * Таблиця 2 позначає поле обовʼязковим, і Приват24 код із порожнім полем 10
+     * відхиляє (і QR, і посилання; перевірено 02.10.2026), тоді як monobank і
+     * Sense Bank приймають обидва варіанти.
+     */
+    const val FALLBACK_CATEGORY = "OTHR/OTHR"
+
+    /**
+     * Максимальний обсяг даних, які кодуються в графічний QR-код
+     * (додаток 4, п. 8 розділу IV). Обмеження стосується саме зображення,
+     * тому на посилання (`deepLink`) не поширюється.
+     */
+    const val MAX_QR_DATA_LENGTH = 507
+
+    /**
+     * Максимальна довжина Base64URL-вмісту. Постанова задає два обмеження, які
+     * не узгоджені між собою: довжину елемента "Закодовані елементи структури
+     * даних" (таблиця 1, рядок 2 — 475 B) і загальний обсяг даних (п. 8 —
+     * 507 B, хоча 50 B коду старту застосунку плюс 475 B вмісту дають 525). Сумісний генератор
+     * має задовольняти обидва, тож береться менше — з 23-байтовим кодом старту застосунку
+     * `qr.bank.gov.ua` першим настає обмеження таблиці 1.
+     */
+    val MAX_PAYLOAD_LENGTH: Int = minOf(475, MAX_QR_DATA_LENGTH - QR_APP_START_URL.encodeToByteArray().size)
+
+    /** Максимальна сума, 999999999.99 грн, у копійках. */
+    const val MAX_AMOUNT_KOPECKS = 99_999_999_999L
+
+    // Base64URL contains only URL-safe characters, so appended to an app start URL that is
+    // itself a valid address it always yields a valid address. An app start URL ending in
+    // "=" carries a query parameter (Raiffeisen: `?payload=`), where a slash would corrupt
+    // the parameter's value.
+    fun join(appStartUrl: String, payload: String): String {
+        val separator = if (appStartUrl.endsWith("/") || appStartUrl.endsWith("=")) "" else "/"
+        return appStartUrl + separator + payload
+    }
+
+    /**
+     * Байтова структура даних QR-коду (таблиця 2 додатка 4), до Base64URL-кодування.
+     * Поля, позначені в Правилах символом "*", кодуються обраним у `encoding`
+     * способом (UTF-8 або Windows-1251); решта полів — символи ISO 646 (ASCII).
+     */
+    fun data(payment: NBUQRPayment): ByteArray {
+        // Only values that passed validate() get here, and it rejects exactly the strings these
+        // encoders cannot represent, so a failure here is a validation bug.
+        fun text(value: String): ByteArray = when (payment.encoding) {
+            NBUQRTextEncoding.UTF_8 -> value.encodeToByteArray()
+            NBUQRTextEncoding.WINDOWS_1251 -> checkNotNull(Windows1251.encode(value)) {
+                "A validated NBUQRPayment field is not encodable: $value"
+            }
+        }
+
+        fun ascii(value: String): ByteArray {
+            check(value.all { it.code < 0x80 }) { "A validated NBUQRPayment field is not ASCII: $value" }
+            return value.encodeToByteArray()
+        }
+
+        val parts = listOf(
+            ascii(SERVICE_TAG),
+            ascii(VERSION),
+            ascii(payment.encoding.code),
+            ascii(payment.function.code),
+            ByteArray(0), // unique_id — RFU
+            text(payment.recipient),
+            ascii(payment.normalizedIban),
+            ascii(formatAmount(payment.amount)),
+            text(payment.recipientCode),
+            ascii(payment.category.ifEmpty { FALLBACK_CATEGORY }),
+            ascii(payment.reference),
+            text(payment.purpose),
+            text(payment.displayText),
+            ascii(payment.editableFields?.let(NBUQRLockMask::hex) ?: ""),
+            ascii(formatDateTime(payment.validUntil)),
+            ascii(formatDateTime(payment.createdAt)),
+            // Field 17 stays empty even though all four official format-003 examples carry "RFU"
+            // there: that is the marker from the table's "content" column, not a value — field 5,
+            // reserved the same way, is empty in the very same examples. "RFU" would also do harm:
+            // per item 4.16 a non-empty field 17 makes field 16 (created_at) mandatory, while here
+            // it is optional. The price is that generated bytes cannot match the examples verbatim.
+            ByteArray(0), // signature
+        )
+
+        val size = parts.sumOf { it.size } + parts.size - 1
+        val result = ByteArray(size)
+        var offset = 0
+        parts.forEachIndexed { index, part ->
+            if (index > 0) result[offset++] = 0x0A
+            part.copyInto(result, offset)
+            offset += part.size
+        }
+        return result
+    }
+
+    private fun formatAmount(amount: NBUQRDecimal?): String {
+        if (amount == null) return ""
+        val kopecks = checkNotNull(amount.roundedKopecksOrNull()) { "A validated amount is out of range: $amount" }
+
+        // Appendix 4, item 4.8: the fractional part is either absent altogether (prefer "UAH3"
+        // over "UAH3.00") or exactly two digits. So a trailing zero may only be dropped together
+        // with the whole fraction: "UAH100.5" is invalid, while both "UAH100" and "UAH100.50" are fine.
+        val major = kopecks / 100
+        val minor = (kopecks % 100).toInt()
+        return CURRENCY_CODE + if (minor == 0) "$major" else "$major.${pad2(minor)}"
+    }
+
+    private fun formatDateTime(instant: Instant?): String =
+        instant?.let { kyivDateTimeDigits(it.epochSeconds) } ?: ""
+
+    private val base64Url = Base64.UrlSafe.withPadding(Base64.PaddingOption.ABSENT)
+
+    fun base64UrlEncode(data: ByteArray): String = base64Url.encode(data)
+}

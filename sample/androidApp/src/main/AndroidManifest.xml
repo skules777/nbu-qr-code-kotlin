@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Lets resolveActivity() see which bank apps from NBUQRBank.ALL are installed (Android 11+). -->
+    <queries>
+        <package android:name="ua.privatbank.ap24" />
+        <package android:name="com.ftband.mono" />
+        <package android:name="ua.privatbank.cb" />
+        <package android:name="ua.com.abank" />
+        <package android:name="ua.raiffeisen.myraif" />
+        <package android:name="com.ukrsibbank.uso.android" />
+        <package android:name="com.ugb.app" />
+        <package android:name="ua.otpbank.android" />
+        <package android:name="ua.creditagricole.mobile.app" />
+        <package android:name="com.radabank.rb24" />
+        <package android:name="com.vostok.bv" />
+        <package android:name="ua.android.kredobank.prod" />
+        <package android:name="ua.alfabank.mobile.android" />
+        <package android:name="ua.izibank.app" />
+        <package android:name="com.creditdnepr.mb" />
+        <package android:name="com.t18.bone.personal.globus" />
+    </queries>
+
+    <application
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@android:style/Theme.Material.Light.NoActionBar">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

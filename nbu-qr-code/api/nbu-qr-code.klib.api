@@ -1,0 +1,429 @@
+// Klib ABI Dump
+// Targets: [iosArm64, iosSimulatorArm64]
+// Rendering settings:
+// - Signature version: 2
+// - Show manifest properties: true
+// - Show declarations: true
+
+// Library unique name: <nbu-qr-code-kotlin:nbu-qr-code>
+final enum class io.github.skules777.nbuqrcode/NBUQREditableField : kotlin/Enum<io.github.skules777.nbuqrcode/NBUQREditableField> { // io.github.skules777.nbuqrcode/NBUQREditableField|null[0]
+    enum entry AMOUNT // io.github.skules777.nbuqrcode/NBUQREditableField.AMOUNT|null[0]
+    enum entry CATEGORY // io.github.skules777.nbuqrcode/NBUQREditableField.CATEGORY|null[0]
+    enum entry DISPLAY_TEXT // io.github.skules777.nbuqrcode/NBUQREditableField.DISPLAY_TEXT|null[0]
+    enum entry IBAN // io.github.skules777.nbuqrcode/NBUQREditableField.IBAN|null[0]
+    enum entry PURPOSE // io.github.skules777.nbuqrcode/NBUQREditableField.PURPOSE|null[0]
+    enum entry RECIPIENT // io.github.skules777.nbuqrcode/NBUQREditableField.RECIPIENT|null[0]
+    enum entry RECIPIENT_CODE // io.github.skules777.nbuqrcode/NBUQREditableField.RECIPIENT_CODE|null[0]
+
+    final val entries // io.github.skules777.nbuqrcode/NBUQREditableField.entries|#static{}entries[0]
+        final fun <get-entries>(): kotlin.enums/EnumEntries<io.github.skules777.nbuqrcode/NBUQREditableField> // io.github.skules777.nbuqrcode/NBUQREditableField.entries.<get-entries>|<get-entries>#static(){}[0]
+
+    final fun valueOf(kotlin/String): io.github.skules777.nbuqrcode/NBUQREditableField // io.github.skules777.nbuqrcode/NBUQREditableField.valueOf|valueOf#static(kotlin.String){}[0]
+    final fun values(): kotlin/Array<io.github.skules777.nbuqrcode/NBUQREditableField> // io.github.skules777.nbuqrcode/NBUQREditableField.values|values#static(){}[0]
+}
+
+final enum class io.github.skules777.nbuqrcode/NBUQRErrorCorrectionLevel : kotlin/Enum<io.github.skules777.nbuqrcode/NBUQRErrorCorrectionLevel> { // io.github.skules777.nbuqrcode/NBUQRErrorCorrectionLevel|null[0]
+    enum entry MEDIUM // io.github.skules777.nbuqrcode/NBUQRErrorCorrectionLevel.MEDIUM|null[0]
+    enum entry QUARTILE // io.github.skules777.nbuqrcode/NBUQRErrorCorrectionLevel.QUARTILE|null[0]
+
+    final val code // io.github.skules777.nbuqrcode/NBUQRErrorCorrectionLevel.code|{}code[0]
+        final fun <get-code>(): kotlin/String // io.github.skules777.nbuqrcode/NBUQRErrorCorrectionLevel.code.<get-code>|<get-code>(){}[0]
+    final val entries // io.github.skules777.nbuqrcode/NBUQRErrorCorrectionLevel.entries|#static{}entries[0]
+        final fun <get-entries>(): kotlin.enums/EnumEntries<io.github.skules777.nbuqrcode/NBUQRErrorCorrectionLevel> // io.github.skules777.nbuqrcode/NBUQRErrorCorrectionLevel.entries.<get-entries>|<get-entries>#static(){}[0]
+
+    final fun valueOf(kotlin/String): io.github.skules777.nbuqrcode/NBUQRErrorCorrectionLevel // io.github.skules777.nbuqrcode/NBUQRErrorCorrectionLevel.valueOf|valueOf#static(kotlin.String){}[0]
+    final fun values(): kotlin/Array<io.github.skules777.nbuqrcode/NBUQRErrorCorrectionLevel> // io.github.skules777.nbuqrcode/NBUQRErrorCorrectionLevel.values|values#static(){}[0]
+}
+
+final enum class io.github.skules777.nbuqrcode/NBUQRField : kotlin/Enum<io.github.skules777.nbuqrcode/NBUQRField> { // io.github.skules777.nbuqrcode/NBUQRField|null[0]
+    enum entry AMOUNT // io.github.skules777.nbuqrcode/NBUQRField.AMOUNT|null[0]
+    enum entry CATEGORY // io.github.skules777.nbuqrcode/NBUQRField.CATEGORY|null[0]
+    enum entry DISPLAY_TEXT // io.github.skules777.nbuqrcode/NBUQRField.DISPLAY_TEXT|null[0]
+    enum entry IBAN // io.github.skules777.nbuqrcode/NBUQRField.IBAN|null[0]
+    enum entry PURPOSE // io.github.skules777.nbuqrcode/NBUQRField.PURPOSE|null[0]
+    enum entry RECIPIENT // io.github.skules777.nbuqrcode/NBUQRField.RECIPIENT|null[0]
+    enum entry RECIPIENT_CODE // io.github.skules777.nbuqrcode/NBUQRField.RECIPIENT_CODE|null[0]
+    enum entry REFERENCE // io.github.skules777.nbuqrcode/NBUQRField.REFERENCE|null[0]
+
+    final val entries // io.github.skules777.nbuqrcode/NBUQRField.entries|#static{}entries[0]
+        final fun <get-entries>(): kotlin.enums/EnumEntries<io.github.skules777.nbuqrcode/NBUQRField> // io.github.skules777.nbuqrcode/NBUQRField.entries.<get-entries>|<get-entries>#static(){}[0]
+
+    final fun valueOf(kotlin/String): io.github.skules777.nbuqrcode/NBUQRField // io.github.skules777.nbuqrcode/NBUQRField.valueOf|valueOf#static(kotlin.String){}[0]
+    final fun values(): kotlin/Array<io.github.skules777.nbuqrcode/NBUQRField> // io.github.skules777.nbuqrcode/NBUQRField.values|values#static(){}[0]
+}
+
+final enum class io.github.skules777.nbuqrcode/NBUQRPaymentFunction : kotlin/Enum<io.github.skules777.nbuqrcode/NBUQRPaymentFunction> { // io.github.skules777.nbuqrcode/NBUQRPaymentFunction|null[0]
+    enum entry ICT // io.github.skules777.nbuqrcode/NBUQRPaymentFunction.ICT|null[0]
+    enum entry UCT // io.github.skules777.nbuqrcode/NBUQRPaymentFunction.UCT|null[0]
+    enum entry XCT // io.github.skules777.nbuqrcode/NBUQRPaymentFunction.XCT|null[0]
+
+    final val code // io.github.skules777.nbuqrcode/NBUQRPaymentFunction.code|{}code[0]
+        final fun <get-code>(): kotlin/String // io.github.skules777.nbuqrcode/NBUQRPaymentFunction.code.<get-code>|<get-code>(){}[0]
+    final val entries // io.github.skules777.nbuqrcode/NBUQRPaymentFunction.entries|#static{}entries[0]
+        final fun <get-entries>(): kotlin.enums/EnumEntries<io.github.skules777.nbuqrcode/NBUQRPaymentFunction> // io.github.skules777.nbuqrcode/NBUQRPaymentFunction.entries.<get-entries>|<get-entries>#static(){}[0]
+
+    final fun valueOf(kotlin/String): io.github.skules777.nbuqrcode/NBUQRPaymentFunction // io.github.skules777.nbuqrcode/NBUQRPaymentFunction.valueOf|valueOf#static(kotlin.String){}[0]
+    final fun values(): kotlin/Array<io.github.skules777.nbuqrcode/NBUQRPaymentFunction> // io.github.skules777.nbuqrcode/NBUQRPaymentFunction.values|values#static(){}[0]
+}
+
+final enum class io.github.skules777.nbuqrcode/NBUQRTextEncoding : kotlin/Enum<io.github.skules777.nbuqrcode/NBUQRTextEncoding> { // io.github.skules777.nbuqrcode/NBUQRTextEncoding|null[0]
+    enum entry UTF_8 // io.github.skules777.nbuqrcode/NBUQRTextEncoding.UTF_8|null[0]
+    enum entry WINDOWS_1251 // io.github.skules777.nbuqrcode/NBUQRTextEncoding.WINDOWS_1251|null[0]
+
+    final val code // io.github.skules777.nbuqrcode/NBUQRTextEncoding.code|{}code[0]
+        final fun <get-code>(): kotlin/String // io.github.skules777.nbuqrcode/NBUQRTextEncoding.code.<get-code>|<get-code>(){}[0]
+    final val entries // io.github.skules777.nbuqrcode/NBUQRTextEncoding.entries|#static{}entries[0]
+        final fun <get-entries>(): kotlin.enums/EnumEntries<io.github.skules777.nbuqrcode/NBUQRTextEncoding> // io.github.skules777.nbuqrcode/NBUQRTextEncoding.entries.<get-entries>|<get-entries>#static(){}[0]
+
+    final fun valueOf(kotlin/String): io.github.skules777.nbuqrcode/NBUQRTextEncoding // io.github.skules777.nbuqrcode/NBUQRTextEncoding.valueOf|valueOf#static(kotlin.String){}[0]
+    final fun values(): kotlin/Array<io.github.skules777.nbuqrcode/NBUQRTextEncoding> // io.github.skules777.nbuqrcode/NBUQRTextEncoding.values|values#static(){}[0]
+}
+
+sealed interface io.github.skules777.nbuqrcode/NBUQRErrorCorrection { // io.github.skules777.nbuqrcode/NBUQRErrorCorrection|null[0]
+    final class Fixed : io.github.skules777.nbuqrcode/NBUQRErrorCorrection { // io.github.skules777.nbuqrcode/NBUQRErrorCorrection.Fixed|null[0]
+        constructor <init>(io.github.skules777.nbuqrcode/NBUQRErrorCorrectionLevel) // io.github.skules777.nbuqrcode/NBUQRErrorCorrection.Fixed.<init>|<init>(io.github.skules777.nbuqrcode.NBUQRErrorCorrectionLevel){}[0]
+
+        final val level // io.github.skules777.nbuqrcode/NBUQRErrorCorrection.Fixed.level|{}level[0]
+            final fun <get-level>(): io.github.skules777.nbuqrcode/NBUQRErrorCorrectionLevel // io.github.skules777.nbuqrcode/NBUQRErrorCorrection.Fixed.level.<get-level>|<get-level>(){}[0]
+
+        final fun component1(): io.github.skules777.nbuqrcode/NBUQRErrorCorrectionLevel // io.github.skules777.nbuqrcode/NBUQRErrorCorrection.Fixed.component1|component1(){}[0]
+        final fun copy(io.github.skules777.nbuqrcode/NBUQRErrorCorrectionLevel = ...): io.github.skules777.nbuqrcode/NBUQRErrorCorrection.Fixed // io.github.skules777.nbuqrcode/NBUQRErrorCorrection.Fixed.copy|copy(io.github.skules777.nbuqrcode.NBUQRErrorCorrectionLevel){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // io.github.skules777.nbuqrcode/NBUQRErrorCorrection.Fixed.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // io.github.skules777.nbuqrcode/NBUQRErrorCorrection.Fixed.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // io.github.skules777.nbuqrcode/NBUQRErrorCorrection.Fixed.toString|toString(){}[0]
+    }
+
+    final object Automatic : io.github.skules777.nbuqrcode/NBUQRErrorCorrection { // io.github.skules777.nbuqrcode/NBUQRErrorCorrection.Automatic|null[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // io.github.skules777.nbuqrcode/NBUQRErrorCorrection.Automatic.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // io.github.skules777.nbuqrcode/NBUQRErrorCorrection.Automatic.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // io.github.skules777.nbuqrcode/NBUQRErrorCorrection.Automatic.toString|toString(){}[0]
+    }
+}
+
+final class io.github.skules777.nbuqrcode/NBUQRBank { // io.github.skules777.nbuqrcode/NBUQRBank|null[0]
+    constructor <init>(kotlin/String, kotlin/String? = ..., kotlin/String? = ...) // io.github.skules777.nbuqrcode/NBUQRBank.<init>|<init>(kotlin.String;kotlin.String?;kotlin.String?){}[0]
+
+    final val androidPackage // io.github.skules777.nbuqrcode/NBUQRBank.androidPackage|{}androidPackage[0]
+        final fun <get-androidPackage>(): kotlin/String? // io.github.skules777.nbuqrcode/NBUQRBank.androidPackage.<get-androidPackage>|<get-androidPackage>(){}[0]
+    final val iosAppStartUrl // io.github.skules777.nbuqrcode/NBUQRBank.iosAppStartUrl|{}iosAppStartUrl[0]
+        final fun <get-iosAppStartUrl>(): kotlin/String? // io.github.skules777.nbuqrcode/NBUQRBank.iosAppStartUrl.<get-iosAppStartUrl>|<get-iosAppStartUrl>(){}[0]
+    final val name // io.github.skules777.nbuqrcode/NBUQRBank.name|{}name[0]
+        final fun <get-name>(): kotlin/String // io.github.skules777.nbuqrcode/NBUQRBank.name.<get-name>|<get-name>(){}[0]
+
+    final fun equals(kotlin/Any?): kotlin/Boolean // io.github.skules777.nbuqrcode/NBUQRBank.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // io.github.skules777.nbuqrcode/NBUQRBank.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // io.github.skules777.nbuqrcode/NBUQRBank.toString|toString(){}[0]
+
+    final object Companion { // io.github.skules777.nbuqrcode/NBUQRBank.Companion|null[0]
+        final val ABANK // io.github.skules777.nbuqrcode/NBUQRBank.Companion.ABANK|{}ABANK[0]
+            final fun <get-ABANK>(): io.github.skules777.nbuqrcode/NBUQRBank // io.github.skules777.nbuqrcode/NBUQRBank.Companion.ABANK.<get-ABANK>|<get-ABANK>(){}[0]
+        final val ALL // io.github.skules777.nbuqrcode/NBUQRBank.Companion.ALL|{}ALL[0]
+            final fun <get-ALL>(): kotlin.collections/List<io.github.skules777.nbuqrcode/NBUQRBank> // io.github.skules777.nbuqrcode/NBUQRBank.Companion.ALL.<get-ALL>|<get-ALL>(){}[0]
+        final val CREDIT_AGRICOLE // io.github.skules777.nbuqrcode/NBUQRBank.Companion.CREDIT_AGRICOLE|{}CREDIT_AGRICOLE[0]
+            final fun <get-CREDIT_AGRICOLE>(): io.github.skules777.nbuqrcode/NBUQRBank // io.github.skules777.nbuqrcode/NBUQRBank.Companion.CREDIT_AGRICOLE.<get-CREDIT_AGRICOLE>|<get-CREDIT_AGRICOLE>(){}[0]
+        final val CREDIT_DNIPRO // io.github.skules777.nbuqrcode/NBUQRBank.Companion.CREDIT_DNIPRO|{}CREDIT_DNIPRO[0]
+            final fun <get-CREDIT_DNIPRO>(): io.github.skules777.nbuqrcode/NBUQRBank // io.github.skules777.nbuqrcode/NBUQRBank.Companion.CREDIT_DNIPRO.<get-CREDIT_DNIPRO>|<get-CREDIT_DNIPRO>(){}[0]
+        final val GLOBUS_BANK // io.github.skules777.nbuqrcode/NBUQRBank.Companion.GLOBUS_BANK|{}GLOBUS_BANK[0]
+            final fun <get-GLOBUS_BANK>(): io.github.skules777.nbuqrcode/NBUQRBank // io.github.skules777.nbuqrcode/NBUQRBank.Companion.GLOBUS_BANK.<get-GLOBUS_BANK>|<get-GLOBUS_BANK>(){}[0]
+        final val IZIBANK // io.github.skules777.nbuqrcode/NBUQRBank.Companion.IZIBANK|{}IZIBANK[0]
+            final fun <get-IZIBANK>(): io.github.skules777.nbuqrcode/NBUQRBank // io.github.skules777.nbuqrcode/NBUQRBank.Companion.IZIBANK.<get-IZIBANK>|<get-IZIBANK>(){}[0]
+        final val KREDOBANK // io.github.skules777.nbuqrcode/NBUQRBank.Companion.KREDOBANK|{}KREDOBANK[0]
+            final fun <get-KREDOBANK>(): io.github.skules777.nbuqrcode/NBUQRBank // io.github.skules777.nbuqrcode/NBUQRBank.Companion.KREDOBANK.<get-KREDOBANK>|<get-KREDOBANK>(){}[0]
+        final val MONOBANK // io.github.skules777.nbuqrcode/NBUQRBank.Companion.MONOBANK|{}MONOBANK[0]
+            final fun <get-MONOBANK>(): io.github.skules777.nbuqrcode/NBUQRBank // io.github.skules777.nbuqrcode/NBUQRBank.Companion.MONOBANK.<get-MONOBANK>|<get-MONOBANK>(){}[0]
+        final val OTP_BANK // io.github.skules777.nbuqrcode/NBUQRBank.Companion.OTP_BANK|{}OTP_BANK[0]
+            final fun <get-OTP_BANK>(): io.github.skules777.nbuqrcode/NBUQRBank // io.github.skules777.nbuqrcode/NBUQRBank.Companion.OTP_BANK.<get-OTP_BANK>|<get-OTP_BANK>(){}[0]
+        final val PRIVAT24_BUSINESS // io.github.skules777.nbuqrcode/NBUQRBank.Companion.PRIVAT24_BUSINESS|{}PRIVAT24_BUSINESS[0]
+            final fun <get-PRIVAT24_BUSINESS>(): io.github.skules777.nbuqrcode/NBUQRBank // io.github.skules777.nbuqrcode/NBUQRBank.Companion.PRIVAT24_BUSINESS.<get-PRIVAT24_BUSINESS>|<get-PRIVAT24_BUSINESS>(){}[0]
+        final val PRIVAT_BANK // io.github.skules777.nbuqrcode/NBUQRBank.Companion.PRIVAT_BANK|{}PRIVAT_BANK[0]
+            final fun <get-PRIVAT_BANK>(): io.github.skules777.nbuqrcode/NBUQRBank // io.github.skules777.nbuqrcode/NBUQRBank.Companion.PRIVAT_BANK.<get-PRIVAT_BANK>|<get-PRIVAT_BANK>(){}[0]
+        final val PUMB // io.github.skules777.nbuqrcode/NBUQRBank.Companion.PUMB|{}PUMB[0]
+            final fun <get-PUMB>(): io.github.skules777.nbuqrcode/NBUQRBank // io.github.skules777.nbuqrcode/NBUQRBank.Companion.PUMB.<get-PUMB>|<get-PUMB>(){}[0]
+        final val RADABANK // io.github.skules777.nbuqrcode/NBUQRBank.Companion.RADABANK|{}RADABANK[0]
+            final fun <get-RADABANK>(): io.github.skules777.nbuqrcode/NBUQRBank // io.github.skules777.nbuqrcode/NBUQRBank.Companion.RADABANK.<get-RADABANK>|<get-RADABANK>(){}[0]
+        final val RAIFFEISEN // io.github.skules777.nbuqrcode/NBUQRBank.Companion.RAIFFEISEN|{}RAIFFEISEN[0]
+            final fun <get-RAIFFEISEN>(): io.github.skules777.nbuqrcode/NBUQRBank // io.github.skules777.nbuqrcode/NBUQRBank.Companion.RAIFFEISEN.<get-RAIFFEISEN>|<get-RAIFFEISEN>(){}[0]
+        final val SENSE_BANK // io.github.skules777.nbuqrcode/NBUQRBank.Companion.SENSE_BANK|{}SENSE_BANK[0]
+            final fun <get-SENSE_BANK>(): io.github.skules777.nbuqrcode/NBUQRBank // io.github.skules777.nbuqrcode/NBUQRBank.Companion.SENSE_BANK.<get-SENSE_BANK>|<get-SENSE_BANK>(){}[0]
+        final val UKRGASBANK // io.github.skules777.nbuqrcode/NBUQRBank.Companion.UKRGASBANK|{}UKRGASBANK[0]
+            final fun <get-UKRGASBANK>(): io.github.skules777.nbuqrcode/NBUQRBank // io.github.skules777.nbuqrcode/NBUQRBank.Companion.UKRGASBANK.<get-UKRGASBANK>|<get-UKRGASBANK>(){}[0]
+        final val UKRSIBBANK // io.github.skules777.nbuqrcode/NBUQRBank.Companion.UKRSIBBANK|{}UKRSIBBANK[0]
+            final fun <get-UKRSIBBANK>(): io.github.skules777.nbuqrcode/NBUQRBank // io.github.skules777.nbuqrcode/NBUQRBank.Companion.UKRSIBBANK.<get-UKRSIBBANK>|<get-UKRSIBBANK>(){}[0]
+        final val VST_BANK // io.github.skules777.nbuqrcode/NBUQRBank.Companion.VST_BANK|{}VST_BANK[0]
+            final fun <get-VST_BANK>(): io.github.skules777.nbuqrcode/NBUQRBank // io.github.skules777.nbuqrcode/NBUQRBank.Companion.VST_BANK.<get-VST_BANK>|<get-VST_BANK>(){}[0]
+    }
+}
+
+final class io.github.skules777.nbuqrcode/NBUQRColor { // io.github.skules777.nbuqrcode/NBUQRColor|null[0]
+    constructor <init>(kotlin/Double, kotlin/Double, kotlin/Double) // io.github.skules777.nbuqrcode/NBUQRColor.<init>|<init>(kotlin.Double;kotlin.Double;kotlin.Double){}[0]
+
+    final val blue // io.github.skules777.nbuqrcode/NBUQRColor.blue|{}blue[0]
+        final fun <get-blue>(): kotlin/Double // io.github.skules777.nbuqrcode/NBUQRColor.blue.<get-blue>|<get-blue>(){}[0]
+    final val green // io.github.skules777.nbuqrcode/NBUQRColor.green|{}green[0]
+        final fun <get-green>(): kotlin/Double // io.github.skules777.nbuqrcode/NBUQRColor.green.<get-green>|<get-green>(){}[0]
+    final val red // io.github.skules777.nbuqrcode/NBUQRColor.red|{}red[0]
+        final fun <get-red>(): kotlin/Double // io.github.skules777.nbuqrcode/NBUQRColor.red.<get-red>|<get-red>(){}[0]
+
+    final fun equals(kotlin/Any?): kotlin/Boolean // io.github.skules777.nbuqrcode/NBUQRColor.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // io.github.skules777.nbuqrcode/NBUQRColor.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // io.github.skules777.nbuqrcode/NBUQRColor.toString|toString(){}[0]
+
+    final object Companion { // io.github.skules777.nbuqrcode/NBUQRColor.Companion|null[0]
+        final val BLACK // io.github.skules777.nbuqrcode/NBUQRColor.Companion.BLACK|{}BLACK[0]
+            final fun <get-BLACK>(): io.github.skules777.nbuqrcode/NBUQRColor // io.github.skules777.nbuqrcode/NBUQRColor.Companion.BLACK.<get-BLACK>|<get-BLACK>(){}[0]
+        final val NBU_GREEN // io.github.skules777.nbuqrcode/NBUQRColor.Companion.NBU_GREEN|{}NBU_GREEN[0]
+            final fun <get-NBU_GREEN>(): io.github.skules777.nbuqrcode/NBUQRColor // io.github.skules777.nbuqrcode/NBUQRColor.Companion.NBU_GREEN.<get-NBU_GREEN>|<get-NBU_GREEN>(){}[0]
+
+        final fun fromHex(kotlin/String): io.github.skules777.nbuqrcode/NBUQRColor? // io.github.skules777.nbuqrcode/NBUQRColor.Companion.fromHex|fromHex(kotlin.String){}[0]
+    }
+}
+
+final class io.github.skules777.nbuqrcode/NBUQRImageRenderer { // io.github.skules777.nbuqrcode/NBUQRImageRenderer|null[0]
+    constructor <init>(io.github.skules777.nbuqrcode/NBUQRErrorCorrection = ..., kotlin/Int = ..., kotlin/Int = ..., io.github.skules777.nbuqrcode/NBUQRColor = ...) // io.github.skules777.nbuqrcode/NBUQRImageRenderer.<init>|<init>(io.github.skules777.nbuqrcode.NBUQRErrorCorrection;kotlin.Int;kotlin.Int;io.github.skules777.nbuqrcode.NBUQRColor){}[0]
+
+    final val accentColor // io.github.skules777.nbuqrcode/NBUQRImageRenderer.accentColor|{}accentColor[0]
+        final fun <get-accentColor>(): io.github.skules777.nbuqrcode/NBUQRColor // io.github.skules777.nbuqrcode/NBUQRImageRenderer.accentColor.<get-accentColor>|<get-accentColor>(){}[0]
+    final val errorCorrection // io.github.skules777.nbuqrcode/NBUQRImageRenderer.errorCorrection|{}errorCorrection[0]
+        final fun <get-errorCorrection>(): io.github.skules777.nbuqrcode/NBUQRErrorCorrection // io.github.skules777.nbuqrcode/NBUQRImageRenderer.errorCorrection.<get-errorCorrection>|<get-errorCorrection>(){}[0]
+    final val moduleSize // io.github.skules777.nbuqrcode/NBUQRImageRenderer.moduleSize|{}moduleSize[0]
+        final fun <get-moduleSize>(): kotlin/Int // io.github.skules777.nbuqrcode/NBUQRImageRenderer.moduleSize.<get-moduleSize>|<get-moduleSize>(){}[0]
+    final val quietZoneModules // io.github.skules777.nbuqrcode/NBUQRImageRenderer.quietZoneModules|{}quietZoneModules[0]
+        final fun <get-quietZoneModules>(): kotlin/Int // io.github.skules777.nbuqrcode/NBUQRImageRenderer.quietZoneModules.<get-quietZoneModules>|<get-quietZoneModules>(){}[0]
+
+    final fun component1(): io.github.skules777.nbuqrcode/NBUQRErrorCorrection // io.github.skules777.nbuqrcode/NBUQRImageRenderer.component1|component1(){}[0]
+    final fun component2(): kotlin/Int // io.github.skules777.nbuqrcode/NBUQRImageRenderer.component2|component2(){}[0]
+    final fun component3(): kotlin/Int // io.github.skules777.nbuqrcode/NBUQRImageRenderer.component3|component3(){}[0]
+    final fun component4(): io.github.skules777.nbuqrcode/NBUQRColor // io.github.skules777.nbuqrcode/NBUQRImageRenderer.component4|component4(){}[0]
+    final fun copy(io.github.skules777.nbuqrcode/NBUQRErrorCorrection = ..., kotlin/Int = ..., kotlin/Int = ..., io.github.skules777.nbuqrcode/NBUQRColor = ...): io.github.skules777.nbuqrcode/NBUQRImageRenderer // io.github.skules777.nbuqrcode/NBUQRImageRenderer.copy|copy(io.github.skules777.nbuqrcode.NBUQRErrorCorrection;kotlin.Int;kotlin.Int;io.github.skules777.nbuqrcode.NBUQRColor){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // io.github.skules777.nbuqrcode/NBUQRImageRenderer.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // io.github.skules777.nbuqrcode/NBUQRImageRenderer.hashCode|hashCode(){}[0]
+    final fun pngBytes(io.github.skules777.nbuqrcode/NBUQRPayload): kotlin/ByteArray // io.github.skules777.nbuqrcode/NBUQRImageRenderer.pngBytes|pngBytes(io.github.skules777.nbuqrcode.NBUQRPayload){}[0]
+    final fun toString(): kotlin/String // io.github.skules777.nbuqrcode/NBUQRImageRenderer.toString|toString(){}[0]
+}
+
+final class io.github.skules777.nbuqrcode/NBUQRPayload { // io.github.skules777.nbuqrcode/NBUQRPayload|null[0]
+    constructor <init>(io.github.skules777.nbuqrcode/NBUQRPayment) // io.github.skules777.nbuqrcode/NBUQRPayload.<init>|<init>(io.github.skules777.nbuqrcode.NBUQRPayment){}[0]
+
+    final val value // io.github.skules777.nbuqrcode/NBUQRPayload.value|{}value[0]
+        final fun <get-value>(): kotlin/String // io.github.skules777.nbuqrcode/NBUQRPayload.value.<get-value>|<get-value>(){}[0]
+
+    final fun androidDeepLink(io.github.skules777.nbuqrcode/NBUQRBank): kotlin/String? // io.github.skules777.nbuqrcode/NBUQRPayload.androidDeepLink|androidDeepLink(io.github.skules777.nbuqrcode.NBUQRBank){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // io.github.skules777.nbuqrcode/NBUQRPayload.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // io.github.skules777.nbuqrcode/NBUQRPayload.hashCode|hashCode(){}[0]
+    final fun iosDeepLink(io.github.skules777.nbuqrcode/NBUQRBank): kotlin/String? // io.github.skules777.nbuqrcode/NBUQRPayload.iosDeepLink|iosDeepLink(io.github.skules777.nbuqrcode.NBUQRBank){}[0]
+    final fun qrUrl(): kotlin/String // io.github.skules777.nbuqrcode/NBUQRPayload.qrUrl|qrUrl(){}[0]
+    final fun toString(): kotlin/String // io.github.skules777.nbuqrcode/NBUQRPayload.toString|toString(){}[0]
+}
+
+final class io.github.skules777.nbuqrcode/NBUQRPayment { // io.github.skules777.nbuqrcode/NBUQRPayment|null[0]
+    constructor <init>(io.github.skules777.nbuqrcode/NBUQRPaymentFunction = ..., io.github.skules777.nbuqrcode/NBUQRTextEncoding = ..., kotlin/String, kotlin/String, platform.Foundation/NSDecimalNumber? = ..., kotlin/String, kotlin/String = ..., kotlin/String = ..., kotlin/String, kotlin/String = ..., kotlin.collections/Set<io.github.skules777.nbuqrcode/NBUQREditableField>? = ..., kotlin.time/Instant? = ..., kotlin.time/Instant? = ...) // io.github.skules777.nbuqrcode/NBUQRPayment.<init>|<init>(io.github.skules777.nbuqrcode.NBUQRPaymentFunction;io.github.skules777.nbuqrcode.NBUQRTextEncoding;kotlin.String;kotlin.String;platform.Foundation.NSDecimalNumber?;kotlin.String;kotlin.String;kotlin.String;kotlin.String;kotlin.String;kotlin.collections.Set<io.github.skules777.nbuqrcode.NBUQREditableField>?;kotlin.time.Instant?;kotlin.time.Instant?){}[0]
+
+    final val amount // io.github.skules777.nbuqrcode/NBUQRPayment.amount|{}amount[0]
+        final fun <get-amount>(): platform.Foundation/NSDecimalNumber? // io.github.skules777.nbuqrcode/NBUQRPayment.amount.<get-amount>|<get-amount>(){}[0]
+    final val category // io.github.skules777.nbuqrcode/NBUQRPayment.category|{}category[0]
+        final fun <get-category>(): kotlin/String // io.github.skules777.nbuqrcode/NBUQRPayment.category.<get-category>|<get-category>(){}[0]
+    final val createdAt // io.github.skules777.nbuqrcode/NBUQRPayment.createdAt|{}createdAt[0]
+        final fun <get-createdAt>(): kotlin.time/Instant? // io.github.skules777.nbuqrcode/NBUQRPayment.createdAt.<get-createdAt>|<get-createdAt>(){}[0]
+    final val displayText // io.github.skules777.nbuqrcode/NBUQRPayment.displayText|{}displayText[0]
+        final fun <get-displayText>(): kotlin/String // io.github.skules777.nbuqrcode/NBUQRPayment.displayText.<get-displayText>|<get-displayText>(){}[0]
+    final val editableFields // io.github.skules777.nbuqrcode/NBUQRPayment.editableFields|{}editableFields[0]
+        final fun <get-editableFields>(): kotlin.collections/Set<io.github.skules777.nbuqrcode/NBUQREditableField>? // io.github.skules777.nbuqrcode/NBUQRPayment.editableFields.<get-editableFields>|<get-editableFields>(){}[0]
+    final val encoding // io.github.skules777.nbuqrcode/NBUQRPayment.encoding|{}encoding[0]
+        final fun <get-encoding>(): io.github.skules777.nbuqrcode/NBUQRTextEncoding // io.github.skules777.nbuqrcode/NBUQRPayment.encoding.<get-encoding>|<get-encoding>(){}[0]
+    final val function // io.github.skules777.nbuqrcode/NBUQRPayment.function|{}function[0]
+        final fun <get-function>(): io.github.skules777.nbuqrcode/NBUQRPaymentFunction // io.github.skules777.nbuqrcode/NBUQRPayment.function.<get-function>|<get-function>(){}[0]
+    final val iban // io.github.skules777.nbuqrcode/NBUQRPayment.iban|{}iban[0]
+        final fun <get-iban>(): kotlin/String // io.github.skules777.nbuqrcode/NBUQRPayment.iban.<get-iban>|<get-iban>(){}[0]
+    final val purpose // io.github.skules777.nbuqrcode/NBUQRPayment.purpose|{}purpose[0]
+        final fun <get-purpose>(): kotlin/String // io.github.skules777.nbuqrcode/NBUQRPayment.purpose.<get-purpose>|<get-purpose>(){}[0]
+    final val recipient // io.github.skules777.nbuqrcode/NBUQRPayment.recipient|{}recipient[0]
+        final fun <get-recipient>(): kotlin/String // io.github.skules777.nbuqrcode/NBUQRPayment.recipient.<get-recipient>|<get-recipient>(){}[0]
+    final val recipientCode // io.github.skules777.nbuqrcode/NBUQRPayment.recipientCode|{}recipientCode[0]
+        final fun <get-recipientCode>(): kotlin/String // io.github.skules777.nbuqrcode/NBUQRPayment.recipientCode.<get-recipientCode>|<get-recipientCode>(){}[0]
+    final val reference // io.github.skules777.nbuqrcode/NBUQRPayment.reference|{}reference[0]
+        final fun <get-reference>(): kotlin/String // io.github.skules777.nbuqrcode/NBUQRPayment.reference.<get-reference>|<get-reference>(){}[0]
+    final val validUntil // io.github.skules777.nbuqrcode/NBUQRPayment.validUntil|{}validUntil[0]
+        final fun <get-validUntil>(): kotlin.time/Instant? // io.github.skules777.nbuqrcode/NBUQRPayment.validUntil.<get-validUntil>|<get-validUntil>(){}[0]
+
+    final fun component1(): io.github.skules777.nbuqrcode/NBUQRPaymentFunction // io.github.skules777.nbuqrcode/NBUQRPayment.component1|component1(){}[0]
+    final fun component10(): kotlin/String // io.github.skules777.nbuqrcode/NBUQRPayment.component10|component10(){}[0]
+    final fun component11(): kotlin.collections/Set<io.github.skules777.nbuqrcode/NBUQREditableField>? // io.github.skules777.nbuqrcode/NBUQRPayment.component11|component11(){}[0]
+    final fun component12(): kotlin.time/Instant? // io.github.skules777.nbuqrcode/NBUQRPayment.component12|component12(){}[0]
+    final fun component13(): kotlin.time/Instant? // io.github.skules777.nbuqrcode/NBUQRPayment.component13|component13(){}[0]
+    final fun component2(): io.github.skules777.nbuqrcode/NBUQRTextEncoding // io.github.skules777.nbuqrcode/NBUQRPayment.component2|component2(){}[0]
+    final fun component3(): kotlin/String // io.github.skules777.nbuqrcode/NBUQRPayment.component3|component3(){}[0]
+    final fun component4(): kotlin/String // io.github.skules777.nbuqrcode/NBUQRPayment.component4|component4(){}[0]
+    final fun component5(): platform.Foundation/NSDecimalNumber? // io.github.skules777.nbuqrcode/NBUQRPayment.component5|component5(){}[0]
+    final fun component6(): kotlin/String // io.github.skules777.nbuqrcode/NBUQRPayment.component6|component6(){}[0]
+    final fun component7(): kotlin/String // io.github.skules777.nbuqrcode/NBUQRPayment.component7|component7(){}[0]
+    final fun component8(): kotlin/String // io.github.skules777.nbuqrcode/NBUQRPayment.component8|component8(){}[0]
+    final fun component9(): kotlin/String // io.github.skules777.nbuqrcode/NBUQRPayment.component9|component9(){}[0]
+    final fun copy(io.github.skules777.nbuqrcode/NBUQRPaymentFunction = ..., io.github.skules777.nbuqrcode/NBUQRTextEncoding = ..., kotlin/String = ..., kotlin/String = ..., platform.Foundation/NSDecimalNumber? = ..., kotlin/String = ..., kotlin/String = ..., kotlin/String = ..., kotlin/String = ..., kotlin/String = ..., kotlin.collections/Set<io.github.skules777.nbuqrcode/NBUQREditableField>? = ..., kotlin.time/Instant? = ..., kotlin.time/Instant? = ...): io.github.skules777.nbuqrcode/NBUQRPayment // io.github.skules777.nbuqrcode/NBUQRPayment.copy|copy(io.github.skules777.nbuqrcode.NBUQRPaymentFunction;io.github.skules777.nbuqrcode.NBUQRTextEncoding;kotlin.String;kotlin.String;platform.Foundation.NSDecimalNumber?;kotlin.String;kotlin.String;kotlin.String;kotlin.String;kotlin.String;kotlin.collections.Set<io.github.skules777.nbuqrcode.NBUQREditableField>?;kotlin.time.Instant?;kotlin.time.Instant?){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // io.github.skules777.nbuqrcode/NBUQRPayment.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // io.github.skules777.nbuqrcode/NBUQRPayment.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // io.github.skules777.nbuqrcode/NBUQRPayment.toString|toString(){}[0]
+    final fun validate(): kotlin.collections/List<io.github.skules777.nbuqrcode/NBUQRValidationIssue> // io.github.skules777.nbuqrcode/NBUQRPayment.validate|validate(){}[0]
+}
+
+final class io.github.skules777.nbuqrcode/NBUQRValidationIssue { // io.github.skules777.nbuqrcode/NBUQRValidationIssue|null[0]
+    constructor <init>(io.github.skules777.nbuqrcode/NBUQRField, io.github.skules777.nbuqrcode/NBUQRValidationIssue.Problem) // io.github.skules777.nbuqrcode/NBUQRValidationIssue.<init>|<init>(io.github.skules777.nbuqrcode.NBUQRField;io.github.skules777.nbuqrcode.NBUQRValidationIssue.Problem){}[0]
+
+    final val field // io.github.skules777.nbuqrcode/NBUQRValidationIssue.field|{}field[0]
+        final fun <get-field>(): io.github.skules777.nbuqrcode/NBUQRField // io.github.skules777.nbuqrcode/NBUQRValidationIssue.field.<get-field>|<get-field>(){}[0]
+    final val problem // io.github.skules777.nbuqrcode/NBUQRValidationIssue.problem|{}problem[0]
+        final fun <get-problem>(): io.github.skules777.nbuqrcode/NBUQRValidationIssue.Problem // io.github.skules777.nbuqrcode/NBUQRValidationIssue.problem.<get-problem>|<get-problem>(){}[0]
+
+    final fun component1(): io.github.skules777.nbuqrcode/NBUQRField // io.github.skules777.nbuqrcode/NBUQRValidationIssue.component1|component1(){}[0]
+    final fun component2(): io.github.skules777.nbuqrcode/NBUQRValidationIssue.Problem // io.github.skules777.nbuqrcode/NBUQRValidationIssue.component2|component2(){}[0]
+    final fun copy(io.github.skules777.nbuqrcode/NBUQRField = ..., io.github.skules777.nbuqrcode/NBUQRValidationIssue.Problem = ...): io.github.skules777.nbuqrcode/NBUQRValidationIssue // io.github.skules777.nbuqrcode/NBUQRValidationIssue.copy|copy(io.github.skules777.nbuqrcode.NBUQRField;io.github.skules777.nbuqrcode.NBUQRValidationIssue.Problem){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // io.github.skules777.nbuqrcode/NBUQRValidationIssue.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // io.github.skules777.nbuqrcode/NBUQRValidationIssue.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // io.github.skules777.nbuqrcode/NBUQRValidationIssue.toString|toString(){}[0]
+
+    final enum class LengthUnit : kotlin/Enum<io.github.skules777.nbuqrcode/NBUQRValidationIssue.LengthUnit> { // io.github.skules777.nbuqrcode/NBUQRValidationIssue.LengthUnit|null[0]
+        enum entry BYTES // io.github.skules777.nbuqrcode/NBUQRValidationIssue.LengthUnit.BYTES|null[0]
+        enum entry CHARACTERS // io.github.skules777.nbuqrcode/NBUQRValidationIssue.LengthUnit.CHARACTERS|null[0]
+
+        final val entries // io.github.skules777.nbuqrcode/NBUQRValidationIssue.LengthUnit.entries|#static{}entries[0]
+            final fun <get-entries>(): kotlin.enums/EnumEntries<io.github.skules777.nbuqrcode/NBUQRValidationIssue.LengthUnit> // io.github.skules777.nbuqrcode/NBUQRValidationIssue.LengthUnit.entries.<get-entries>|<get-entries>#static(){}[0]
+
+        final fun valueOf(kotlin/String): io.github.skules777.nbuqrcode/NBUQRValidationIssue.LengthUnit // io.github.skules777.nbuqrcode/NBUQRValidationIssue.LengthUnit.valueOf|valueOf#static(kotlin.String){}[0]
+        final fun values(): kotlin/Array<io.github.skules777.nbuqrcode/NBUQRValidationIssue.LengthUnit> // io.github.skules777.nbuqrcode/NBUQRValidationIssue.LengthUnit.values|values#static(){}[0]
+    }
+
+    sealed interface Problem { // io.github.skules777.nbuqrcode/NBUQRValidationIssue.Problem|null[0]
+        final class TooLong : io.github.skules777.nbuqrcode/NBUQRValidationIssue.Problem { // io.github.skules777.nbuqrcode/NBUQRValidationIssue.Problem.TooLong|null[0]
+            constructor <init>(kotlin/Int, io.github.skules777.nbuqrcode/NBUQRValidationIssue.LengthUnit) // io.github.skules777.nbuqrcode/NBUQRValidationIssue.Problem.TooLong.<init>|<init>(kotlin.Int;io.github.skules777.nbuqrcode.NBUQRValidationIssue.LengthUnit){}[0]
+
+            final val max // io.github.skules777.nbuqrcode/NBUQRValidationIssue.Problem.TooLong.max|{}max[0]
+                final fun <get-max>(): kotlin/Int // io.github.skules777.nbuqrcode/NBUQRValidationIssue.Problem.TooLong.max.<get-max>|<get-max>(){}[0]
+            final val unit // io.github.skules777.nbuqrcode/NBUQRValidationIssue.Problem.TooLong.unit|{}unit[0]
+                final fun <get-unit>(): io.github.skules777.nbuqrcode/NBUQRValidationIssue.LengthUnit // io.github.skules777.nbuqrcode/NBUQRValidationIssue.Problem.TooLong.unit.<get-unit>|<get-unit>(){}[0]
+
+            final fun component1(): kotlin/Int // io.github.skules777.nbuqrcode/NBUQRValidationIssue.Problem.TooLong.component1|component1(){}[0]
+            final fun component2(): io.github.skules777.nbuqrcode/NBUQRValidationIssue.LengthUnit // io.github.skules777.nbuqrcode/NBUQRValidationIssue.Problem.TooLong.component2|component2(){}[0]
+            final fun copy(kotlin/Int = ..., io.github.skules777.nbuqrcode/NBUQRValidationIssue.LengthUnit = ...): io.github.skules777.nbuqrcode/NBUQRValidationIssue.Problem.TooLong // io.github.skules777.nbuqrcode/NBUQRValidationIssue.Problem.TooLong.copy|copy(kotlin.Int;io.github.skules777.nbuqrcode.NBUQRValidationIssue.LengthUnit){}[0]
+            final fun equals(kotlin/Any?): kotlin/Boolean // io.github.skules777.nbuqrcode/NBUQRValidationIssue.Problem.TooLong.equals|equals(kotlin.Any?){}[0]
+            final fun hashCode(): kotlin/Int // io.github.skules777.nbuqrcode/NBUQRValidationIssue.Problem.TooLong.hashCode|hashCode(){}[0]
+            final fun toString(): kotlin/String // io.github.skules777.nbuqrcode/NBUQRValidationIssue.Problem.TooLong.toString|toString(){}[0]
+        }
+
+        final object ForbiddenCharacters : io.github.skules777.nbuqrcode/NBUQRValidationIssue.Problem { // io.github.skules777.nbuqrcode/NBUQRValidationIssue.Problem.ForbiddenCharacters|null[0]
+            final fun equals(kotlin/Any?): kotlin/Boolean // io.github.skules777.nbuqrcode/NBUQRValidationIssue.Problem.ForbiddenCharacters.equals|equals(kotlin.Any?){}[0]
+            final fun hashCode(): kotlin/Int // io.github.skules777.nbuqrcode/NBUQRValidationIssue.Problem.ForbiddenCharacters.hashCode|hashCode(){}[0]
+            final fun toString(): kotlin/String // io.github.skules777.nbuqrcode/NBUQRValidationIssue.Problem.ForbiddenCharacters.toString|toString(){}[0]
+        }
+
+        final object InvalidChecksum : io.github.skules777.nbuqrcode/NBUQRValidationIssue.Problem { // io.github.skules777.nbuqrcode/NBUQRValidationIssue.Problem.InvalidChecksum|null[0]
+            final fun equals(kotlin/Any?): kotlin/Boolean // io.github.skules777.nbuqrcode/NBUQRValidationIssue.Problem.InvalidChecksum.equals|equals(kotlin.Any?){}[0]
+            final fun hashCode(): kotlin/Int // io.github.skules777.nbuqrcode/NBUQRValidationIssue.Problem.InvalidChecksum.hashCode|hashCode(){}[0]
+            final fun toString(): kotlin/String // io.github.skules777.nbuqrcode/NBUQRValidationIssue.Problem.InvalidChecksum.toString|toString(){}[0]
+        }
+
+        final object InvalidFormat : io.github.skules777.nbuqrcode/NBUQRValidationIssue.Problem { // io.github.skules777.nbuqrcode/NBUQRValidationIssue.Problem.InvalidFormat|null[0]
+            final fun equals(kotlin/Any?): kotlin/Boolean // io.github.skules777.nbuqrcode/NBUQRValidationIssue.Problem.InvalidFormat.equals|equals(kotlin.Any?){}[0]
+            final fun hashCode(): kotlin/Int // io.github.skules777.nbuqrcode/NBUQRValidationIssue.Problem.InvalidFormat.hashCode|hashCode(){}[0]
+            final fun toString(): kotlin/String // io.github.skules777.nbuqrcode/NBUQRValidationIssue.Problem.InvalidFormat.toString|toString(){}[0]
+        }
+
+        final object Missing : io.github.skules777.nbuqrcode/NBUQRValidationIssue.Problem { // io.github.skules777.nbuqrcode/NBUQRValidationIssue.Problem.Missing|null[0]
+            final fun equals(kotlin/Any?): kotlin/Boolean // io.github.skules777.nbuqrcode/NBUQRValidationIssue.Problem.Missing.equals|equals(kotlin.Any?){}[0]
+            final fun hashCode(): kotlin/Int // io.github.skules777.nbuqrcode/NBUQRValidationIssue.Problem.Missing.hashCode|hashCode(){}[0]
+            final fun toString(): kotlin/String // io.github.skules777.nbuqrcode/NBUQRValidationIssue.Problem.Missing.toString|toString(){}[0]
+        }
+
+        final object OutOfRange : io.github.skules777.nbuqrcode/NBUQRValidationIssue.Problem { // io.github.skules777.nbuqrcode/NBUQRValidationIssue.Problem.OutOfRange|null[0]
+            final fun equals(kotlin/Any?): kotlin/Boolean // io.github.skules777.nbuqrcode/NBUQRValidationIssue.Problem.OutOfRange.equals|equals(kotlin.Any?){}[0]
+            final fun hashCode(): kotlin/Int // io.github.skules777.nbuqrcode/NBUQRValidationIssue.Problem.OutOfRange.hashCode|hashCode(){}[0]
+            final fun toString(): kotlin/String // io.github.skules777.nbuqrcode/NBUQRValidationIssue.Problem.OutOfRange.toString|toString(){}[0]
+        }
+
+        final object UnsupportedCharacters : io.github.skules777.nbuqrcode/NBUQRValidationIssue.Problem { // io.github.skules777.nbuqrcode/NBUQRValidationIssue.Problem.UnsupportedCharacters|null[0]
+            final fun equals(kotlin/Any?): kotlin/Boolean // io.github.skules777.nbuqrcode/NBUQRValidationIssue.Problem.UnsupportedCharacters.equals|equals(kotlin.Any?){}[0]
+            final fun hashCode(): kotlin/Int // io.github.skules777.nbuqrcode/NBUQRValidationIssue.Problem.UnsupportedCharacters.hashCode|hashCode(){}[0]
+            final fun toString(): kotlin/String // io.github.skules777.nbuqrcode/NBUQRValidationIssue.Problem.UnsupportedCharacters.toString|toString(){}[0]
+        }
+    }
+}
+
+sealed class io.github.skules777.nbuqrcode/NBUQRException : kotlin/Exception { // io.github.skules777.nbuqrcode/NBUQRException|null[0]
+    final class InvalidPayment : io.github.skules777.nbuqrcode/NBUQRException { // io.github.skules777.nbuqrcode/NBUQRException.InvalidPayment|null[0]
+        constructor <init>(kotlin.collections/List<io.github.skules777.nbuqrcode/NBUQRValidationIssue>) // io.github.skules777.nbuqrcode/NBUQRException.InvalidPayment.<init>|<init>(kotlin.collections.List<io.github.skules777.nbuqrcode.NBUQRValidationIssue>){}[0]
+
+        final val issues // io.github.skules777.nbuqrcode/NBUQRException.InvalidPayment.issues|{}issues[0]
+            final fun <get-issues>(): kotlin.collections/List<io.github.skules777.nbuqrcode/NBUQRValidationIssue> // io.github.skules777.nbuqrcode/NBUQRException.InvalidPayment.issues.<get-issues>|<get-issues>(){}[0]
+    }
+
+    final class QRDataTooLong : io.github.skules777.nbuqrcode/NBUQRException { // io.github.skules777.nbuqrcode/NBUQRException.QRDataTooLong|null[0]
+        constructor <init>(kotlin/Int, kotlin/Int) // io.github.skules777.nbuqrcode/NBUQRException.QRDataTooLong.<init>|<init>(kotlin.Int;kotlin.Int){}[0]
+
+        final val actual // io.github.skules777.nbuqrcode/NBUQRException.QRDataTooLong.actual|{}actual[0]
+            final fun <get-actual>(): kotlin/Int // io.github.skules777.nbuqrcode/NBUQRException.QRDataTooLong.actual.<get-actual>|<get-actual>(){}[0]
+        final val max // io.github.skules777.nbuqrcode/NBUQRException.QRDataTooLong.max|{}max[0]
+            final fun <get-max>(): kotlin/Int // io.github.skules777.nbuqrcode/NBUQRException.QRDataTooLong.max.<get-max>|<get-max>(){}[0]
+    }
+}
+
+sealed class io.github.skules777.nbuqrcode/NBUQRImageException : kotlin/Exception { // io.github.skules777.nbuqrcode/NBUQRImageException|null[0]
+    final class DataTooLong : io.github.skules777.nbuqrcode/NBUQRImageException { // io.github.skules777.nbuqrcode/NBUQRImageException.DataTooLong|null[0]
+        constructor <init>(kotlin/Int, kotlin/Int, kotlin/Int, io.github.skules777.nbuqrcode/NBUQRErrorCorrectionLevel) // io.github.skules777.nbuqrcode/NBUQRImageException.DataTooLong.<init>|<init>(kotlin.Int;kotlin.Int;kotlin.Int;io.github.skules777.nbuqrcode.NBUQRErrorCorrectionLevel){}[0]
+
+        final val excessDataBytes // io.github.skules777.nbuqrcode/NBUQRImageException.DataTooLong.excessDataBytes|{}excessDataBytes[0]
+            final fun <get-excessDataBytes>(): kotlin/Int // io.github.skules777.nbuqrcode/NBUQRImageException.DataTooLong.excessDataBytes.<get-excessDataBytes>|<get-excessDataBytes>(){}[0]
+        final val level // io.github.skules777.nbuqrcode/NBUQRImageException.DataTooLong.level|{}level[0]
+            final fun <get-level>(): io.github.skules777.nbuqrcode/NBUQRErrorCorrectionLevel // io.github.skules777.nbuqrcode/NBUQRImageException.DataTooLong.level.<get-level>|<get-level>(){}[0]
+        final val maximumVersion // io.github.skules777.nbuqrcode/NBUQRImageException.DataTooLong.maximumVersion|{}maximumVersion[0]
+            final fun <get-maximumVersion>(): kotlin/Int // io.github.skules777.nbuqrcode/NBUQRImageException.DataTooLong.maximumVersion.<get-maximumVersion>|<get-maximumVersion>(){}[0]
+        final val version // io.github.skules777.nbuqrcode/NBUQRImageException.DataTooLong.version|{}version[0]
+            final fun <get-version>(): kotlin/Int // io.github.skules777.nbuqrcode/NBUQRImageException.DataTooLong.version.<get-version>|<get-version>(){}[0]
+    }
+
+    final class DataTooShort : io.github.skules777.nbuqrcode/NBUQRImageException { // io.github.skules777.nbuqrcode/NBUQRImageException.DataTooShort|null[0]
+        constructor <init>(kotlin/Int, kotlin/Int, kotlin/Int, io.github.skules777.nbuqrcode/NBUQRErrorCorrectionLevel) // io.github.skules777.nbuqrcode/NBUQRImageException.DataTooShort.<init>|<init>(kotlin.Int;kotlin.Int;kotlin.Int;io.github.skules777.nbuqrcode.NBUQRErrorCorrectionLevel){}[0]
+
+        final val additionalDataBytes // io.github.skules777.nbuqrcode/NBUQRImageException.DataTooShort.additionalDataBytes|{}additionalDataBytes[0]
+            final fun <get-additionalDataBytes>(): kotlin/Int // io.github.skules777.nbuqrcode/NBUQRImageException.DataTooShort.additionalDataBytes.<get-additionalDataBytes>|<get-additionalDataBytes>(){}[0]
+        final val level // io.github.skules777.nbuqrcode/NBUQRImageException.DataTooShort.level|{}level[0]
+            final fun <get-level>(): io.github.skules777.nbuqrcode/NBUQRErrorCorrectionLevel // io.github.skules777.nbuqrcode/NBUQRImageException.DataTooShort.level.<get-level>|<get-level>(){}[0]
+        final val minimumVersion // io.github.skules777.nbuqrcode/NBUQRImageException.DataTooShort.minimumVersion|{}minimumVersion[0]
+            final fun <get-minimumVersion>(): kotlin/Int // io.github.skules777.nbuqrcode/NBUQRImageException.DataTooShort.minimumVersion.<get-minimumVersion>|<get-minimumVersion>(){}[0]
+        final val version // io.github.skules777.nbuqrcode/NBUQRImageException.DataTooShort.version|{}version[0]
+            final fun <get-version>(): kotlin/Int // io.github.skules777.nbuqrcode/NBUQRImageException.DataTooShort.version.<get-version>|<get-version>(){}[0]
+    }
+
+    final class InsufficientAccentContrast : io.github.skules777.nbuqrcode/NBUQRImageException { // io.github.skules777.nbuqrcode/NBUQRImageException.InsufficientAccentContrast|null[0]
+        constructor <init>(kotlin/Double, kotlin/Double) // io.github.skules777.nbuqrcode/NBUQRImageException.InsufficientAccentContrast.<init>|<init>(kotlin.Double;kotlin.Double){}[0]
+
+        final val contrast // io.github.skules777.nbuqrcode/NBUQRImageException.InsufficientAccentContrast.contrast|{}contrast[0]
+            final fun <get-contrast>(): kotlin/Double // io.github.skules777.nbuqrcode/NBUQRImageException.InsufficientAccentContrast.contrast.<get-contrast>|<get-contrast>(){}[0]
+        final val minimum // io.github.skules777.nbuqrcode/NBUQRImageException.InsufficientAccentContrast.minimum|{}minimum[0]
+            final fun <get-minimum>(): kotlin/Double // io.github.skules777.nbuqrcode/NBUQRImageException.InsufficientAccentContrast.minimum.<get-minimum>|<get-minimum>(){}[0]
+    }
+
+    final class InvalidModuleSize : io.github.skules777.nbuqrcode/NBUQRImageException { // io.github.skules777.nbuqrcode/NBUQRImageException.InvalidModuleSize|null[0]
+        constructor <init>(kotlin/Int) // io.github.skules777.nbuqrcode/NBUQRImageException.InvalidModuleSize.<init>|<init>(kotlin.Int){}[0]
+
+        final val moduleSize // io.github.skules777.nbuqrcode/NBUQRImageException.InvalidModuleSize.moduleSize|{}moduleSize[0]
+            final fun <get-moduleSize>(): kotlin/Int // io.github.skules777.nbuqrcode/NBUQRImageException.InvalidModuleSize.moduleSize.<get-moduleSize>|<get-moduleSize>(){}[0]
+    }
+
+    final class InvalidQuietZone : io.github.skules777.nbuqrcode/NBUQRImageException { // io.github.skules777.nbuqrcode/NBUQRImageException.InvalidQuietZone|null[0]
+        constructor <init>(kotlin/Int) // io.github.skules777.nbuqrcode/NBUQRImageException.InvalidQuietZone.<init>|<init>(kotlin.Int){}[0]
+
+        final val quietZoneModules // io.github.skules777.nbuqrcode/NBUQRImageException.InvalidQuietZone.quietZoneModules|{}quietZoneModules[0]
+            final fun <get-quietZoneModules>(): kotlin/Int // io.github.skules777.nbuqrcode/NBUQRImageException.InvalidQuietZone.quietZoneModules.<get-quietZoneModules>|<get-quietZoneModules>(){}[0]
+    }
+
+    final class RenderingFailed : io.github.skules777.nbuqrcode/NBUQRImageException { // io.github.skules777.nbuqrcode/NBUQRImageException.RenderingFailed|null[0]
+        constructor <init>(kotlin/String, kotlin/Throwable? = ...) // io.github.skules777.nbuqrcode/NBUQRImageException.RenderingFailed.<init>|<init>(kotlin.String;kotlin.Throwable?){}[0]
+
+        final val reason // io.github.skules777.nbuqrcode/NBUQRImageException.RenderingFailed.reason|{}reason[0]
+            final fun <get-reason>(): kotlin/String // io.github.skules777.nbuqrcode/NBUQRImageException.RenderingFailed.reason.<get-reason>|<get-reason>(){}[0]
+    }
+}
+
+final fun (io.github.skules777.nbuqrcode/NBUQRImageRenderer).io.github.skules777.nbuqrcode/uiImage(io.github.skules777.nbuqrcode/NBUQRPayload): platform.UIKit/UIImage // io.github.skules777.nbuqrcode/uiImage|uiImage@io.github.skules777.nbuqrcode.NBUQRImageRenderer(io.github.skules777.nbuqrcode.NBUQRPayload){}[0]
+final fun (kotlin/Int).io.github.skules777.nbuqrcode/toNBUQRDecimal(): platform.Foundation/NSDecimalNumber // io.github.skules777.nbuqrcode/toNBUQRDecimal|toNBUQRDecimal@kotlin.Int(){}[0]
+final fun (kotlin/Long).io.github.skules777.nbuqrcode/toNBUQRDecimal(): platform.Foundation/NSDecimalNumber // io.github.skules777.nbuqrcode/toNBUQRDecimal|toNBUQRDecimal@kotlin.Long(){}[0]
+final fun (kotlin/String).io.github.skules777.nbuqrcode/toNBUQRDecimal(): platform.Foundation/NSDecimalNumber // io.github.skules777.nbuqrcode/toNBUQRDecimal|toNBUQRDecimal@kotlin.String(){}[0]
+final fun (kotlin/String).io.github.skules777.nbuqrcode/toNBUQRDecimalOrNull(): platform.Foundation/NSDecimalNumber? // io.github.skules777.nbuqrcode/toNBUQRDecimalOrNull|toNBUQRDecimalOrNull@kotlin.String(){}[0]

@@ -1,0 +1,343 @@
+public final class io/github/skules777/nbuqrcode/NBUQRBank {
+	public static final field ABANK Lio/github/skules777/nbuqrcode/NBUQRBank;
+	public static final field ALL Ljava/util/List;
+	public static final field CREDIT_AGRICOLE Lio/github/skules777/nbuqrcode/NBUQRBank;
+	public static final field CREDIT_DNIPRO Lio/github/skules777/nbuqrcode/NBUQRBank;
+	public static final field Companion Lio/github/skules777/nbuqrcode/NBUQRBank$Companion;
+	public static final field GLOBUS_BANK Lio/github/skules777/nbuqrcode/NBUQRBank;
+	public static final field IZIBANK Lio/github/skules777/nbuqrcode/NBUQRBank;
+	public static final field KREDOBANK Lio/github/skules777/nbuqrcode/NBUQRBank;
+	public static final field MONOBANK Lio/github/skules777/nbuqrcode/NBUQRBank;
+	public static final field OTP_BANK Lio/github/skules777/nbuqrcode/NBUQRBank;
+	public static final field PRIVAT24_BUSINESS Lio/github/skules777/nbuqrcode/NBUQRBank;
+	public static final field PRIVAT_BANK Lio/github/skules777/nbuqrcode/NBUQRBank;
+	public static final field PUMB Lio/github/skules777/nbuqrcode/NBUQRBank;
+	public static final field RADABANK Lio/github/skules777/nbuqrcode/NBUQRBank;
+	public static final field RAIFFEISEN Lio/github/skules777/nbuqrcode/NBUQRBank;
+	public static final field SENSE_BANK Lio/github/skules777/nbuqrcode/NBUQRBank;
+	public static final field UKRGASBANK Lio/github/skules777/nbuqrcode/NBUQRBank;
+	public static final field UKRSIBBANK Lio/github/skules777/nbuqrcode/NBUQRBank;
+	public static final field VST_BANK Lio/github/skules777/nbuqrcode/NBUQRBank;
+	public fun <init> (Ljava/lang/String;)V
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;)V
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAndroidPackage ()Ljava/lang/String;
+	public final fun getIosAppStartUrl ()Ljava/lang/String;
+	public final fun getName ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/skules777/nbuqrcode/NBUQRBank$Companion {
+}
+
+public final class io/github/skules777/nbuqrcode/NBUQRColor {
+	public static final field BLACK Lio/github/skules777/nbuqrcode/NBUQRColor;
+	public static final field Companion Lio/github/skules777/nbuqrcode/NBUQRColor$Companion;
+	public static final field NBU_GREEN Lio/github/skules777/nbuqrcode/NBUQRColor;
+	public fun <init> (DDD)V
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getBlue ()D
+	public final fun getGreen ()D
+	public final fun getRed ()D
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/skules777/nbuqrcode/NBUQRColor$Companion {
+	public final fun fromHex (Ljava/lang/String;)Lio/github/skules777/nbuqrcode/NBUQRColor;
+}
+
+public final class io/github/skules777/nbuqrcode/NBUQRDecimals {
+	public static final fun toNBUQRDecimal (I)Ljava/math/BigDecimal;
+	public static final fun toNBUQRDecimal (J)Ljava/math/BigDecimal;
+	public static final fun toNBUQRDecimal (Ljava/lang/String;)Ljava/math/BigDecimal;
+	public static final fun toNBUQRDecimalOrNull (Ljava/lang/String;)Ljava/math/BigDecimal;
+}
+
+public final class io/github/skules777/nbuqrcode/NBUQREditableField : java/lang/Enum {
+	public static final field AMOUNT Lio/github/skules777/nbuqrcode/NBUQREditableField;
+	public static final field CATEGORY Lio/github/skules777/nbuqrcode/NBUQREditableField;
+	public static final field DISPLAY_TEXT Lio/github/skules777/nbuqrcode/NBUQREditableField;
+	public static final field IBAN Lio/github/skules777/nbuqrcode/NBUQREditableField;
+	public static final field PURPOSE Lio/github/skules777/nbuqrcode/NBUQREditableField;
+	public static final field RECIPIENT Lio/github/skules777/nbuqrcode/NBUQREditableField;
+	public static final field RECIPIENT_CODE Lio/github/skules777/nbuqrcode/NBUQREditableField;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lio/github/skules777/nbuqrcode/NBUQREditableField;
+	public static fun values ()[Lio/github/skules777/nbuqrcode/NBUQREditableField;
+}
+
+public abstract interface class io/github/skules777/nbuqrcode/NBUQRErrorCorrection {
+}
+
+public final class io/github/skules777/nbuqrcode/NBUQRErrorCorrection$Automatic : io/github/skules777/nbuqrcode/NBUQRErrorCorrection {
+	public static final field INSTANCE Lio/github/skules777/nbuqrcode/NBUQRErrorCorrection$Automatic;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/skules777/nbuqrcode/NBUQRErrorCorrection$Fixed : io/github/skules777/nbuqrcode/NBUQRErrorCorrection {
+	public fun <init> (Lio/github/skules777/nbuqrcode/NBUQRErrorCorrectionLevel;)V
+	public final fun component1 ()Lio/github/skules777/nbuqrcode/NBUQRErrorCorrectionLevel;
+	public final fun copy (Lio/github/skules777/nbuqrcode/NBUQRErrorCorrectionLevel;)Lio/github/skules777/nbuqrcode/NBUQRErrorCorrection$Fixed;
+	public static synthetic fun copy$default (Lio/github/skules777/nbuqrcode/NBUQRErrorCorrection$Fixed;Lio/github/skules777/nbuqrcode/NBUQRErrorCorrectionLevel;ILjava/lang/Object;)Lio/github/skules777/nbuqrcode/NBUQRErrorCorrection$Fixed;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getLevel ()Lio/github/skules777/nbuqrcode/NBUQRErrorCorrectionLevel;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/skules777/nbuqrcode/NBUQRErrorCorrectionLevel : java/lang/Enum {
+	public static final field MEDIUM Lio/github/skules777/nbuqrcode/NBUQRErrorCorrectionLevel;
+	public static final field QUARTILE Lio/github/skules777/nbuqrcode/NBUQRErrorCorrectionLevel;
+	public final fun getCode ()Ljava/lang/String;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lio/github/skules777/nbuqrcode/NBUQRErrorCorrectionLevel;
+	public static fun values ()[Lio/github/skules777/nbuqrcode/NBUQRErrorCorrectionLevel;
+}
+
+public abstract class io/github/skules777/nbuqrcode/NBUQRException : java/lang/Exception {
+	public synthetic fun <init> (Ljava/lang/String;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+}
+
+public final class io/github/skules777/nbuqrcode/NBUQRException$InvalidPayment : io/github/skules777/nbuqrcode/NBUQRException {
+	public fun <init> (Ljava/util/List;)V
+	public final fun getIssues ()Ljava/util/List;
+}
+
+public final class io/github/skules777/nbuqrcode/NBUQRException$QRDataTooLong : io/github/skules777/nbuqrcode/NBUQRException {
+	public fun <init> (II)V
+	public final fun getActual ()I
+	public final fun getMax ()I
+}
+
+public final class io/github/skules777/nbuqrcode/NBUQRField : java/lang/Enum {
+	public static final field AMOUNT Lio/github/skules777/nbuqrcode/NBUQRField;
+	public static final field CATEGORY Lio/github/skules777/nbuqrcode/NBUQRField;
+	public static final field DISPLAY_TEXT Lio/github/skules777/nbuqrcode/NBUQRField;
+	public static final field IBAN Lio/github/skules777/nbuqrcode/NBUQRField;
+	public static final field PURPOSE Lio/github/skules777/nbuqrcode/NBUQRField;
+	public static final field RECIPIENT Lio/github/skules777/nbuqrcode/NBUQRField;
+	public static final field RECIPIENT_CODE Lio/github/skules777/nbuqrcode/NBUQRField;
+	public static final field REFERENCE Lio/github/skules777/nbuqrcode/NBUQRField;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lio/github/skules777/nbuqrcode/NBUQRField;
+	public static fun values ()[Lio/github/skules777/nbuqrcode/NBUQRField;
+}
+
+public abstract class io/github/skules777/nbuqrcode/NBUQRImageException : java/lang/Exception {
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/Throwable;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+}
+
+public final class io/github/skules777/nbuqrcode/NBUQRImageException$DataTooLong : io/github/skules777/nbuqrcode/NBUQRImageException {
+	public fun <init> (IIILio/github/skules777/nbuqrcode/NBUQRErrorCorrectionLevel;)V
+	public final fun getExcessDataBytes ()I
+	public final fun getLevel ()Lio/github/skules777/nbuqrcode/NBUQRErrorCorrectionLevel;
+	public final fun getMaximumVersion ()I
+	public final fun getVersion ()I
+}
+
+public final class io/github/skules777/nbuqrcode/NBUQRImageException$DataTooShort : io/github/skules777/nbuqrcode/NBUQRImageException {
+	public fun <init> (IIILio/github/skules777/nbuqrcode/NBUQRErrorCorrectionLevel;)V
+	public final fun getAdditionalDataBytes ()I
+	public final fun getLevel ()Lio/github/skules777/nbuqrcode/NBUQRErrorCorrectionLevel;
+	public final fun getMinimumVersion ()I
+	public final fun getVersion ()I
+}
+
+public final class io/github/skules777/nbuqrcode/NBUQRImageException$InsufficientAccentContrast : io/github/skules777/nbuqrcode/NBUQRImageException {
+	public fun <init> (DD)V
+	public final fun getContrast ()D
+	public final fun getMinimum ()D
+}
+
+public final class io/github/skules777/nbuqrcode/NBUQRImageException$InvalidModuleSize : io/github/skules777/nbuqrcode/NBUQRImageException {
+	public fun <init> (I)V
+	public final fun getModuleSize ()I
+}
+
+public final class io/github/skules777/nbuqrcode/NBUQRImageException$InvalidQuietZone : io/github/skules777/nbuqrcode/NBUQRImageException {
+	public fun <init> (I)V
+	public final fun getQuietZoneModules ()I
+}
+
+public final class io/github/skules777/nbuqrcode/NBUQRImageException$RenderingFailed : io/github/skules777/nbuqrcode/NBUQRImageException {
+	public fun <init> (Ljava/lang/String;Ljava/lang/Throwable;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/Throwable;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun getReason ()Ljava/lang/String;
+}
+
+public final class io/github/skules777/nbuqrcode/NBUQRImageRenderer {
+	public fun <init> ()V
+	public fun <init> (Lio/github/skules777/nbuqrcode/NBUQRErrorCorrection;IILio/github/skules777/nbuqrcode/NBUQRColor;)V
+	public synthetic fun <init> (Lio/github/skules777/nbuqrcode/NBUQRErrorCorrection;IILio/github/skules777/nbuqrcode/NBUQRColor;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Lio/github/skules777/nbuqrcode/NBUQRErrorCorrection;
+	public final fun component2 ()I
+	public final fun component3 ()I
+	public final fun component4 ()Lio/github/skules777/nbuqrcode/NBUQRColor;
+	public final fun copy (Lio/github/skules777/nbuqrcode/NBUQRErrorCorrection;IILio/github/skules777/nbuqrcode/NBUQRColor;)Lio/github/skules777/nbuqrcode/NBUQRImageRenderer;
+	public static synthetic fun copy$default (Lio/github/skules777/nbuqrcode/NBUQRImageRenderer;Lio/github/skules777/nbuqrcode/NBUQRErrorCorrection;IILio/github/skules777/nbuqrcode/NBUQRColor;ILjava/lang/Object;)Lio/github/skules777/nbuqrcode/NBUQRImageRenderer;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAccentColor ()Lio/github/skules777/nbuqrcode/NBUQRColor;
+	public final fun getErrorCorrection ()Lio/github/skules777/nbuqrcode/NBUQRErrorCorrection;
+	public final fun getModuleSize ()I
+	public final fun getQuietZoneModules ()I
+	public fun hashCode ()I
+	public final fun pngBytes (Lio/github/skules777/nbuqrcode/NBUQRPayload;)[B
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/skules777/nbuqrcode/NBUQRImages {
+	public static final fun bufferedImage (Lio/github/skules777/nbuqrcode/NBUQRImageRenderer;Lio/github/skules777/nbuqrcode/NBUQRPayload;)Ljava/awt/image/BufferedImage;
+}
+
+public final class io/github/skules777/nbuqrcode/NBUQRPayload {
+	public fun <init> (Lio/github/skules777/nbuqrcode/NBUQRPayment;)V
+	public final fun androidDeepLink (Lio/github/skules777/nbuqrcode/NBUQRBank;)Ljava/lang/String;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getValue ()Ljava/lang/String;
+	public fun hashCode ()I
+	public final fun iosDeepLink (Lio/github/skules777/nbuqrcode/NBUQRBank;)Ljava/lang/String;
+	public final fun qrUrl ()Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/skules777/nbuqrcode/NBUQRPayment {
+	public fun <init> (Lio/github/skules777/nbuqrcode/NBUQRPaymentFunction;Lio/github/skules777/nbuqrcode/NBUQRTextEncoding;Ljava/lang/String;Ljava/lang/String;Ljava/math/BigDecimal;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Set;Lkotlin/time/Instant;Lkotlin/time/Instant;)V
+	public synthetic fun <init> (Lio/github/skules777/nbuqrcode/NBUQRPaymentFunction;Lio/github/skules777/nbuqrcode/NBUQRTextEncoding;Ljava/lang/String;Ljava/lang/String;Ljava/math/BigDecimal;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Set;Lkotlin/time/Instant;Lkotlin/time/Instant;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Lio/github/skules777/nbuqrcode/NBUQRPaymentFunction;
+	public final fun component10 ()Ljava/lang/String;
+	public final fun component11 ()Ljava/util/Set;
+	public final fun component12 ()Lkotlin/time/Instant;
+	public final fun component13 ()Lkotlin/time/Instant;
+	public final fun component2 ()Lio/github/skules777/nbuqrcode/NBUQRTextEncoding;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun component4 ()Ljava/lang/String;
+	public final fun component5 ()Ljava/math/BigDecimal;
+	public final fun component6 ()Ljava/lang/String;
+	public final fun component7 ()Ljava/lang/String;
+	public final fun component8 ()Ljava/lang/String;
+	public final fun component9 ()Ljava/lang/String;
+	public final fun copy (Lio/github/skules777/nbuqrcode/NBUQRPaymentFunction;Lio/github/skules777/nbuqrcode/NBUQRTextEncoding;Ljava/lang/String;Ljava/lang/String;Ljava/math/BigDecimal;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Set;Lkotlin/time/Instant;Lkotlin/time/Instant;)Lio/github/skules777/nbuqrcode/NBUQRPayment;
+	public static synthetic fun copy$default (Lio/github/skules777/nbuqrcode/NBUQRPayment;Lio/github/skules777/nbuqrcode/NBUQRPaymentFunction;Lio/github/skules777/nbuqrcode/NBUQRTextEncoding;Ljava/lang/String;Ljava/lang/String;Ljava/math/BigDecimal;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Set;Lkotlin/time/Instant;Lkotlin/time/Instant;ILjava/lang/Object;)Lio/github/skules777/nbuqrcode/NBUQRPayment;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAmount ()Ljava/math/BigDecimal;
+	public final fun getCategory ()Ljava/lang/String;
+	public final fun getCreatedAt ()Lkotlin/time/Instant;
+	public final fun getDisplayText ()Ljava/lang/String;
+	public final fun getEditableFields ()Ljava/util/Set;
+	public final fun getEncoding ()Lio/github/skules777/nbuqrcode/NBUQRTextEncoding;
+	public final fun getFunction ()Lio/github/skules777/nbuqrcode/NBUQRPaymentFunction;
+	public final fun getIban ()Ljava/lang/String;
+	public final fun getPurpose ()Ljava/lang/String;
+	public final fun getRecipient ()Ljava/lang/String;
+	public final fun getRecipientCode ()Ljava/lang/String;
+	public final fun getReference ()Ljava/lang/String;
+	public final fun getValidUntil ()Lkotlin/time/Instant;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+	public final fun validate ()Ljava/util/List;
+}
+
+public final class io/github/skules777/nbuqrcode/NBUQRPaymentFunction : java/lang/Enum {
+	public static final field ICT Lio/github/skules777/nbuqrcode/NBUQRPaymentFunction;
+	public static final field UCT Lio/github/skules777/nbuqrcode/NBUQRPaymentFunction;
+	public static final field XCT Lio/github/skules777/nbuqrcode/NBUQRPaymentFunction;
+	public final fun getCode ()Ljava/lang/String;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lio/github/skules777/nbuqrcode/NBUQRPaymentFunction;
+	public static fun values ()[Lio/github/skules777/nbuqrcode/NBUQRPaymentFunction;
+}
+
+public final class io/github/skules777/nbuqrcode/NBUQRTextEncoding : java/lang/Enum {
+	public static final field UTF_8 Lio/github/skules777/nbuqrcode/NBUQRTextEncoding;
+	public static final field WINDOWS_1251 Lio/github/skules777/nbuqrcode/NBUQRTextEncoding;
+	public final fun getCode ()Ljava/lang/String;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lio/github/skules777/nbuqrcode/NBUQRTextEncoding;
+	public static fun values ()[Lio/github/skules777/nbuqrcode/NBUQRTextEncoding;
+}
+
+public final class io/github/skules777/nbuqrcode/NBUQRValidationIssue {
+	public fun <init> (Lio/github/skules777/nbuqrcode/NBUQRField;Lio/github/skules777/nbuqrcode/NBUQRValidationIssue$Problem;)V
+	public final fun component1 ()Lio/github/skules777/nbuqrcode/NBUQRField;
+	public final fun component2 ()Lio/github/skules777/nbuqrcode/NBUQRValidationIssue$Problem;
+	public final fun copy (Lio/github/skules777/nbuqrcode/NBUQRField;Lio/github/skules777/nbuqrcode/NBUQRValidationIssue$Problem;)Lio/github/skules777/nbuqrcode/NBUQRValidationIssue;
+	public static synthetic fun copy$default (Lio/github/skules777/nbuqrcode/NBUQRValidationIssue;Lio/github/skules777/nbuqrcode/NBUQRField;Lio/github/skules777/nbuqrcode/NBUQRValidationIssue$Problem;ILjava/lang/Object;)Lio/github/skules777/nbuqrcode/NBUQRValidationIssue;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getField ()Lio/github/skules777/nbuqrcode/NBUQRField;
+	public final fun getProblem ()Lio/github/skules777/nbuqrcode/NBUQRValidationIssue$Problem;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/skules777/nbuqrcode/NBUQRValidationIssue$LengthUnit : java/lang/Enum {
+	public static final field BYTES Lio/github/skules777/nbuqrcode/NBUQRValidationIssue$LengthUnit;
+	public static final field CHARACTERS Lio/github/skules777/nbuqrcode/NBUQRValidationIssue$LengthUnit;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lio/github/skules777/nbuqrcode/NBUQRValidationIssue$LengthUnit;
+	public static fun values ()[Lio/github/skules777/nbuqrcode/NBUQRValidationIssue$LengthUnit;
+}
+
+public abstract interface class io/github/skules777/nbuqrcode/NBUQRValidationIssue$Problem {
+}
+
+public final class io/github/skules777/nbuqrcode/NBUQRValidationIssue$Problem$ForbiddenCharacters : io/github/skules777/nbuqrcode/NBUQRValidationIssue$Problem {
+	public static final field INSTANCE Lio/github/skules777/nbuqrcode/NBUQRValidationIssue$Problem$ForbiddenCharacters;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/skules777/nbuqrcode/NBUQRValidationIssue$Problem$InvalidChecksum : io/github/skules777/nbuqrcode/NBUQRValidationIssue$Problem {
+	public static final field INSTANCE Lio/github/skules777/nbuqrcode/NBUQRValidationIssue$Problem$InvalidChecksum;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/skules777/nbuqrcode/NBUQRValidationIssue$Problem$InvalidFormat : io/github/skules777/nbuqrcode/NBUQRValidationIssue$Problem {
+	public static final field INSTANCE Lio/github/skules777/nbuqrcode/NBUQRValidationIssue$Problem$InvalidFormat;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/skules777/nbuqrcode/NBUQRValidationIssue$Problem$Missing : io/github/skules777/nbuqrcode/NBUQRValidationIssue$Problem {
+	public static final field INSTANCE Lio/github/skules777/nbuqrcode/NBUQRValidationIssue$Problem$Missing;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/skules777/nbuqrcode/NBUQRValidationIssue$Problem$OutOfRange : io/github/skules777/nbuqrcode/NBUQRValidationIssue$Problem {
+	public static final field INSTANCE Lio/github/skules777/nbuqrcode/NBUQRValidationIssue$Problem$OutOfRange;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/skules777/nbuqrcode/NBUQRValidationIssue$Problem$TooLong : io/github/skules777/nbuqrcode/NBUQRValidationIssue$Problem {
+	public fun <init> (ILio/github/skules777/nbuqrcode/NBUQRValidationIssue$LengthUnit;)V
+	public final fun component1 ()I
+	public final fun component2 ()Lio/github/skules777/nbuqrcode/NBUQRValidationIssue$LengthUnit;
+	public final fun copy (ILio/github/skules777/nbuqrcode/NBUQRValidationIssue$LengthUnit;)Lio/github/skules777/nbuqrcode/NBUQRValidationIssue$Problem$TooLong;
+	public static synthetic fun copy$default (Lio/github/skules777/nbuqrcode/NBUQRValidationIssue$Problem$TooLong;ILio/github/skules777/nbuqrcode/NBUQRValidationIssue$LengthUnit;ILjava/lang/Object;)Lio/github/skules777/nbuqrcode/NBUQRValidationIssue$Problem$TooLong;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getMax ()I
+	public final fun getUnit ()Lio/github/skules777/nbuqrcode/NBUQRValidationIssue$LengthUnit;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/skules777/nbuqrcode/NBUQRValidationIssue$Problem$UnsupportedCharacters : io/github/skules777/nbuqrcode/NBUQRValidationIssue$Problem {
+	public static final field INSTANCE Lio/github/skules777/nbuqrcode/NBUQRValidationIssue$Problem$UnsupportedCharacters;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CADisableMinimumFrameDurationOnPhone</key>
+	<true/>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>p24business</string>
+		<string>abank24</string>
+		<string>com.ukrsibbank.ukrsibonline.new</string>
+		<string>ecobank</string>
+		<string>otpbankua</string>
+		<string>vostok</string>
+	</array>
+</dict>
+</plist>

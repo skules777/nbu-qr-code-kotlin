@@ -1,0 +1,54 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  jvm-android:
+    name: JVM & Android — test, ABI
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-java@v6
+        with:
+          distribution: temurin
+          java-version: 21
+      - uses: gradle/actions/setup-gradle@v5
+      - name: Test
+        run: ./gradlew jvmTest testAndroidHostTest
+      - name: Check public API
+        run: ./gradlew checkKotlinAbi
+      - name: Check published dependencies
+        run: ./scripts/check-published-dependencies.sh
+      - name: Build sample (Android)
+        run: ./gradlew :sample:androidApp:assembleDebug
+
+  ios:
+    name: iOS — test
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-java@v6
+        with:
+          distribution: temurin
+          java-version: 21
+      - uses: gradle/actions/setup-gradle@v5
+      - name: Test
+        run: ./gradlew iosSimulatorArm64Test
+      - name: Build sample (iOS)
+        run: ./gradlew :sample:shared:compileKotlinIosSimulatorArm64
+
+  docs:
+    name: Documentation
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-java@v6
+        with:
+          distribution: temurin
+          java-version: 21
+      - uses: gradle/actions/setup-gradle@v5
+      - name: Build documentation
+        run: ./gradlew :dokkaGenerate

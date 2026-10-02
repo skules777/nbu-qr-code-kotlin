@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_title">QR-код НБУ</string>
+
+    <string name="field_recipient">Отримувач</string>
+    <string name="field_iban">IBAN</string>
+    <string name="field_amount">Сума, грн</string>
+    <string name="field_recipient_code">ЄДРПОУ / РНОКПП</string>
+    <string name="field_purpose">Призначення платежу</string>
+
+    <string name="error_missing">Обовʼязкове поле</string>
+    <string name="error_too_long_characters">Не більше %1$d символів</string>
+    <string name="error_too_long_bytes">Не більше %1$d байтів</string>
+    <string name="error_invalid_format">Невірний формат</string>
+    <string name="error_invalid_checksum">Помилка в номері рахунку</string>
+    <string name="error_out_of_range">Сума поза дозволеними межами</string>
+    <string name="error_unsupported_characters">Містить недозволені символи</string>
+    <string name="error_forbidden_characters">Містить керуючі символи</string>
+    <string name="error_not_a_number">Невірне число</string>
+
+    <string name="qr_hint">Виправте поля вище, щоб отримати QR-код</string>
+    <string name="qr_content_description">Платіжний QR-код</string>
+    <string name="qr_error_too_short">Замало даних для QR-коду — опишіть призначення платежу детальніше</string>
+    <string name="qr_error_too_long">Задовге призначення платежу для QR-коду</string>
+    <string name="qr_error_generic">Не вдалося згенерувати QR-код</string>
+
+    <string name="banks_title">Оплатити в застосунку банку</string>
+    <string name="banks_none">Жодного банківського застосунку зі списку не встановлено</string>
+    <string name="bank_button">Оплатити через %1$s</string>
+    <string name="bank_app_missing">Не вдалося відкрити %1$s — застосунок не встановлено</string>
+</resources>

@@ -1,0 +1,41 @@
+name: Publish
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  publish:
+    name: Publish to Maven Central
+    # iOS klibs can only be built on macOS, and Maven Central needs every target in one upload.
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v7
+      # A version on Maven Central can never be changed or removed, so a mismatch must stop here.
+      - name: Check that the release tag matches VERSION_NAME
+        env:
+          TAG: ${{ github.event.release.tag_name }}
+        run: |
+          version=$(sed -n 's/^VERSION_NAME=//p' gradle.properties)
+          if [ "$TAG" != "$version" ]; then
+            echo "::error::Release tag '$TAG' does not match VERSION_NAME=$version in gradle.properties"
+            exit 1
+          fi
+      - uses: actions/setup-java@v6
+        with:
+          distribution: temurin
+          java-version: 21
+      - uses: gradle/actions/setup-gradle@v5
+      - name: Test
+        run: ./gradlew jvmTest testAndroidHostTest iosSimulatorArm64Test
+      - name: Check public API
+        run: ./gradlew checkKotlinAbi
+      - name: Check published dependencies
+        run: ./scripts/check-published-dependencies.sh
+      - name: Publish
+        run: ./gradlew publishAndReleaseToMavenCentral --no-configuration-cache
+        env:
+          ORG_GRADLE_PROJECT_mavenCentralUsername: ${{ secrets.MAVEN_CENTRAL_USERNAME }}
+          ORG_GRADLE_PROJECT_mavenCentralPassword: ${{ secrets.MAVEN_CENTRAL_PASSWORD }}
+          ORG_GRADLE_PROJECT_signingInMemoryKey: ${{ secrets.SIGNING_KEY }}
+          ORG_GRADLE_PROJECT_signingInMemoryKeyPassword: ${{ secrets.SIGNING_KEY_PASSWORD }}
