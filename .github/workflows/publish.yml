@@ -8,7 +8,7 @@ jobs:
   publish:
     name: Publish to Maven Central
     # iOS klibs can only be built on macOS, and Maven Central needs every target in one upload.
-    runs-on: macos-15
+    runs-on: macos-latest
     steps:
       - uses: actions/checkout@v7
       # A version on Maven Central can never be changed or removed, so a mismatch must stop here.
